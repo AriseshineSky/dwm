@@ -64,6 +64,7 @@ static const char *tags[] = {
     "", // tag:7  key:t  desc:telegram
     "", // tag:8  key:w  desc:beekeeper-studio
     "󰮊", // tag:9  key:o  desc:obsidian
+    "", // tag:10 key:m  desc:music
 };
 
 /* 自定义窗口显示规则 */
@@ -199,6 +200,7 @@ static Key keys[] = {
     TAGKEYS(XK_t, 6, "telegram-desktop")
     TAGKEYS(XK_w, 7, "beekeeper-studio")
     TAGKEYS(XK_o, 8, "obsidian")
+    TAGKEYS(XK_m, 9, "~/scripts/music_player.sh")
 };
 
 static Button buttons[] = {
