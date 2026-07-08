@@ -39,7 +39,7 @@ cron() {
         [ $i -lt 30 ] && to=(wifi cpu mem date vol icons bat)            # 前 30秒  更新所有模块
         update ${to[@]}                                                  # 将需要更新的模块传递给 update
         sleep 5; let i+=5
-    done &
+    done
 }
 
 # cron 启动定时更新状态栏

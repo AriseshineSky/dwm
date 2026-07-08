@@ -18,7 +18,7 @@ daemons() {
     [ $1 ] && sleep $1
     $_thisdir/statusbar/statusbar.sh cron &   # 开启状态栏定时更新
     xss-lock -- ~/scripts/blurlock.sh &       # 开启自动锁屏程序
-    fcitx5 &                                  # 开启输入法
+    ~/scripts/start-fcitx5.sh &               # 输入法唯一启动入口
     lemonade server &                         # 开启lemonade 远程剪切板支持
     flameshot &                               # 截图要跑一个程序在后台 不然无法将截图保存到剪贴板
     dunst -conf ~/scripts/config/dunst.conf & # 开启通知server
@@ -38,5 +38,3 @@ cron() {
 settings 1 &                                  # 初始化设置项
 daemons 3 &                                   # 后台程序项
 cron 5 &                                      # 定时任务项
-/bin/bash ~/scripts/setxmodmap-colemak.sh &
-

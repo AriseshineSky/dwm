@@ -58,13 +58,13 @@ static const char *tags[] = {
     "", // tag:0  key:1  desc:terminal1
     "", // tag:1  key:2  desc:terminal2
     "", // tag:2  key:3  desc:terminal3
-    "󰢹", // tag:4  key:9  desc:remmina
-    "", // tag:5  key:c  desc:chrome
-    "󰕮", // tag:6  key:u  desc:clickup
-    "", // tag:7  key:t  desc:telegram
-    "", // tag:8  key:w  desc:beekeeper-studio
-    "󰮊", // tag:9  key:o  desc:obsidian
-    "", // tag:10 key:m  desc:music
+    "󰢹", // tag:3  key:r  desc:remmina
+    "", // tag:4  key:c  desc:chrome
+    "", // tag:5  key:w  desc:wechat
+    "", // tag:6  key:t  desc:telegram
+    "", // tag:7  key:d  desc:datagrip
+    "󰮊", // tag:8  key:o  desc:obsidian
+    "", // tag:9  key:m  desc:music
 };
 
 /* 自定义窗口显示规则 */
@@ -180,6 +180,7 @@ static Key keys[] = {
 
     /* spawn + SHCMD 执行对应命令(已下部分建议完全自己重新定义) */
     { MODKEY,              XK_Return, spawn, SHCMD("st") },                              /* super enter      | 打开st终端             */
+    { MODKEY,              XK_w,      spawn, SHCMD("wechat") },                          /* super d          | 打开wechat            */
     { MODKEY,              XK_F1,     spawn, SHCMD("killall pcmanfm || pcmanfm") },                             /* super F1         | 打开/关闭pcmanfm       */
     { MODKEY,              XK_s,      spawn, SHCMD("rofi -show run") },                                         /* super d          | rofi: 执行run          */
     { MODKEY,              XK_p,      spawn, SHCMD("$DWM/DEF/rofi.sh") },                                       /* super p          | rofi: 执行自定义脚本   */
@@ -196,9 +197,9 @@ static Key keys[] = {
     TAGKEYS(XK_3, 2, 0)
     TAGKEYS(XK_r, 3, "remmina")
     TAGKEYS(XK_c, 4, "google-chrome-stable")
-    TAGKEYS(XK_u, 5, "clickup")
+    TAGKEYS(XK_w, 5, "wechat")
     TAGKEYS(XK_t, 6, "telegram-desktop")
-    TAGKEYS(XK_w, 7, "beekeeper-studio")
+    TAGKEYS(XK_d, 7, "datagrip")
     TAGKEYS(XK_o, 8, "obsidian")
     TAGKEYS(XK_m, 9, "~/scripts/music_player.sh")
 };
