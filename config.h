@@ -62,7 +62,7 @@ static const char *tags[] = {
     "", // tag:4  key:c  desc:chrome
     "", // tag:5  key:w  desc:wechat
     "", // tag:6  key:t  desc:telegram
-    "", // tag:7  key:d  desc:datagrip
+    "", // tag:7  key:d  desc:beekeeper
     "󰮊", // tag:8  key:o  desc:obsidian
     "", // tag:9  key:m  desc:music
 };
@@ -183,7 +183,7 @@ static Key keys[] = {
     { MODKEY,              XK_w,      spawn, SHCMD("wechat") },                          /* super d          | 打开wechat            */
     { MODKEY,              XK_F1,     spawn, SHCMD("killall pcmanfm || pcmanfm") },                             /* super F1         | 打开/关闭pcmanfm       */
     { MODKEY,              XK_s,      spawn, SHCMD("rofi -show run") },                                         /* super d          | rofi: 执行run          */
-    { MODKEY,              XK_p,      spawn, SHCMD("$DWM/DEF/rofi.sh") },                                       /* super p          | rofi: 执行自定义脚本   */
+    { MODKEY,              XK_p,      spawn, SHCMD("dmenu_run") },                                               /* super p          | 打开dmenu             */
     { MODKEY|ShiftMask,    XK_Up,     spawn, SHCMD("$DWM/DEF/set_vol.sh up") },                                 /* super shift up   | 音量加                 */
     { MODKEY|ShiftMask,    XK_Down,   spawn, SHCMD("$DWM/DEF/set_vol.sh down") },                               /* super shift down | 音量减                 */
     { MODKEY|ShiftMask,    XK_a,      spawn, SHCMD("flameshot gui -c -p ~/Pictures/screenshots") },             /* super shift a    | 截图                   */
@@ -199,7 +199,7 @@ static Key keys[] = {
     TAGKEYS(XK_c, 4, "google-chrome-stable")
     TAGKEYS(XK_w, 5, "wechat")
     TAGKEYS(XK_t, 6, "telegram-desktop")
-    TAGKEYS(XK_d, 7, "datagrip")
+    TAGKEYS(XK_d, 7, "beekeeper-studio")
     TAGKEYS(XK_o, 8, "obsidian")
     TAGKEYS(XK_m, 9, "~/scripts/music_player.sh")
 };
