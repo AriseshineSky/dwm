@@ -29,7 +29,7 @@ cron() {
     [ $1 ] && sleep $1
     let i=10
     while true; do
-        [ $((i % 10)) -eq 0 ] && ~/scripts/set_screen.sh check # 每10秒检查显示器状态 以此自动设置显示器
+        [ $((i % 60)) -eq 0 ] && ~/scripts/set_screen.sh check # 每60秒检查显示器状态（set_screen.sh 已改用 xrandr --current，不再重读 EDID）
         [ $((i % 300)) -eq 0 ] && feh --randomize --bg-fill ~/Pictures/wallpaper/*.png # 每300秒更新壁纸
         sleep 10; let i+=10
     done
